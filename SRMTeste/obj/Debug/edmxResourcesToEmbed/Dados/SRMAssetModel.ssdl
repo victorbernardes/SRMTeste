@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSRMAssetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Cod_Cliente" />
+    </Key>
+    <Property Name="Cod_Cliente" Type="int" Nullable="false" />
+    <Property Name="Nome_Cliente" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CPF" Type="bigint" Nullable="false" />
+    <Property Name="Endereco_Rua" Type="varchar" MaxLength="50" />
+    <Property Name="Endereco_Numero" Type="bigint" />
+    <Property Name="Endereco_Complemento" Type="varchar" MaxLength="50" />
+    <Property Name="Endereco_Bairro" Type="varchar" MaxLength="50" />
+    <Property Name="Endereco_Cidade" Type="varchar" MaxLength="50" />
+    <Property Name="Endereco_Estado" Type="varchar" MaxLength="50" />
+    <Property Name="Endereco_CEP" Type="varchar" MaxLength="9" />
+    <Property Name="Data_Nascimento" Type="date" />
+    <Property Name="Data_Cadastro" Type="date" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Telefone" Type="bigint" />
+    <Property Name="Valor_Credito" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="Cod_Produto" />
+    </Key>
+    <Property Name="Cod_Produto" Type="int" Nullable="false" />
+    <Property Name="Nome_Produto" Type="varchar" MaxLength="50" />
+    <Property Name="Descricao_Produto" Type="varchar" MaxLength="100" />
+    <Property Name="Tipo_Produto" Type="varchar" MaxLength="50" />
+    <Property Name="Valor_Produto" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Data_Inclusao" Type="date" />
+  </EntityType>
+  <EntityContainer Name="DBSRMAssetModelStoreContainer">
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

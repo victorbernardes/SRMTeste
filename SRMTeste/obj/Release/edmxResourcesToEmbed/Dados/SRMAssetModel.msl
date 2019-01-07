@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBSRMAssetModelStoreContainer" CdmEntityContainer="DBSRMAssetEntities">
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="DBSRMAssetModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="Endereco_Bairro" ColumnName="Endereco_Bairro" />
+          <ScalarProperty Name="Cod_Cliente" ColumnName="Cod_Cliente" />
+          <ScalarProperty Name="Nome_Cliente" ColumnName="Nome_Cliente" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Endereco_Rua" ColumnName="Endereco_Rua" />
+          <ScalarProperty Name="Endereco_Numero" ColumnName="Endereco_Numero" />
+          <ScalarProperty Name="Endereco_Complemento" ColumnName="Endereco_Complemento" />
+          <ScalarProperty Name="Endereco_Cidade" ColumnName="Endereco_Cidade" />
+          <ScalarProperty Name="Endereco_Estado" ColumnName="Endereco_Estado" />
+          <ScalarProperty Name="Endereco_CEP" ColumnName="Endereco_CEP" />
+          <ScalarProperty Name="Data_Nascimento" ColumnName="Data_Nascimento" />
+          <ScalarProperty Name="Data_Cadastro" ColumnName="Data_Cadastro" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Valor_Credito" ColumnName="Valor_Credito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produto">
+      <EntityTypeMapping TypeName="DBSRMAssetModel.Produto">
+        <MappingFragment StoreEntitySet="Produto">
+          <ScalarProperty Name="Cod_Produto" ColumnName="Cod_Produto" />
+          <ScalarProperty Name="Nome_Produto" ColumnName="Nome_Produto" />
+          <ScalarProperty Name="Descricao_Produto" ColumnName="Descricao_Produto" />
+          <ScalarProperty Name="Tipo_Produto" ColumnName="Tipo_Produto" />
+          <ScalarProperty Name="Valor_Produto" ColumnName="Valor_Produto" />
+          <ScalarProperty Name="Data_Inclusao" ColumnName="Data_Inclusao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

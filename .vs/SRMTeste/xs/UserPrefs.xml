@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{0E086E24-77A8-4A1D-8304-DA026CA3B1DD}|Default">
+  <MonoDevelop.Ide.ItemProperties.SRMTeste PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SRMTeste/Cadastro/CadClientes.cs">
+    <Files>
+      <File FileName="SRMTeste/Cadastro/CadClientes.cs" Line="36" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

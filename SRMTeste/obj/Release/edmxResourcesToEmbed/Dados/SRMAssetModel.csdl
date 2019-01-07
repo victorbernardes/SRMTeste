@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSRMAssetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Cod_Cliente" />
+    </Key>
+    <Property Name="Cod_Cliente" Type="Int32" Nullable="false" />
+    <Property Name="Nome_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CPF" Type="Int64" Nullable="false" />
+    <Property Name="Endereco_Rua" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Endereco_Numero" Type="Int64" />
+    <Property Name="Endereco_Complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Endereco_Cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Endereco_Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Endereco_CEP" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="Data_Nascimento" Type="DateTime" Precision="0" />
+    <Property Name="Data_Cadastro" Type="DateTime" Precision="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefone" Type="Int64" />
+    <Property Name="Valor_Credito" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Endereco_Bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="Cod_Produto" />
+    </Key>
+    <Property Name="Cod_Produto" Type="Int32" Nullable="false" />
+    <Property Name="Nome_Produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Descricao_Produto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo_Produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valor_Produto" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Data_Inclusao" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="DBSRMAssetEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <EntitySet Name="Produto" EntityType="Self.Produto" />
+  </EntityContainer>
+</Schema>

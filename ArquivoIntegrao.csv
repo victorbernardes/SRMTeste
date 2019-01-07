@@ -1,0 +1,3 @@
+Nome_Cliente;CPF;Data_Cadastro;Data_Nascimento;Email;Endereco_CEP;Endereco_Bairro;Endereco_Cidade;Endereco_Complemento;Endereco_Estado;Endereco_Numero;Endereco_Rua;Telefone;Valor_Credito
+Victor;34534523456;01/01/2019;20/08/1993;victor@gmail.com;2323123;Mooca;Sao Paulo;;SP;123;Rua Guilherme;945234523;10000
+Guilherme;12323434567;03/01/2019;12/12/1980;guilherme@live.com;1310915;Jardim Paulista;Sao Paulo;;SP;1345;Av. Paulista;765764576;100000

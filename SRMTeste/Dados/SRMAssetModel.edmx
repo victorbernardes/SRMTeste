@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBSRMAssetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="Cod_Cliente" />
+          </Key>
+          <Property Name="Cod_Cliente" Type="int" Nullable="false" />
+          <Property Name="Nome_Cliente" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CPF" Type="bigint" Nullable="false" />
+          <Property Name="Endereco_Rua" Type="varchar" MaxLength="50" />
+          <Property Name="Endereco_Numero" Type="bigint" />
+          <Property Name="Endereco_Complemento" Type="varchar" MaxLength="50" />
+          <Property Name="Endereco_Bairro" Type="varchar" MaxLength="50" />
+          <Property Name="Endereco_Cidade" Type="varchar" MaxLength="50" />
+          <Property Name="Endereco_Estado" Type="varchar" MaxLength="50" />
+          <Property Name="Endereco_CEP" Type="varchar" MaxLength="9" />
+          <Property Name="Data_Nascimento" Type="date" />
+          <Property Name="Data_Cadastro" Type="date" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Telefone" Type="bigint" />
+          <Property Name="Valor_Credito" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Produto">
+          <Key>
+            <PropertyRef Name="Cod_Produto" />
+          </Key>
+          <Property Name="Cod_Produto" Type="int" Nullable="false" />
+          <Property Name="Nome_Produto" Type="varchar" MaxLength="50" />
+          <Property Name="Descricao_Produto" Type="varchar" MaxLength="100" />
+          <Property Name="Tipo_Produto" Type="varchar" MaxLength="50" />
+          <Property Name="Valor_Produto" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Data_Inclusao" Type="date" />
+        </EntityType>
+        <EntityContainer Name="DBSRMAssetModelStoreContainer">
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBSRMAssetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="Cod_Cliente" />
+          </Key>
+          <Property Name="Cod_Cliente" Type="Int32" Nullable="false" />
+          <Property Name="Nome_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CPF" Type="Int64" Nullable="false" />
+          <Property Name="Endereco_Rua" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Endereco_Numero" Type="Int64" />
+          <Property Name="Endereco_Complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Endereco_Cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Endereco_Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Endereco_CEP" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="Data_Nascimento" Type="DateTime" Precision="0" />
+          <Property Name="Data_Cadastro" Type="DateTime" Precision="0" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefone" Type="Int64" />
+          <Property Name="Valor_Credito" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Endereco_Bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Produto">
+          <Key>
+            <PropertyRef Name="Cod_Produto" />
+          </Key>
+          <Property Name="Cod_Produto" Type="Int32" Nullable="false" />
+          <Property Name="Nome_Produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Descricao_Produto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo_Produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Valor_Produto" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Data_Inclusao" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="DBSRMAssetEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+          <EntitySet Name="Produto" EntityType="Self.Produto" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBSRMAssetModelStoreContainer" CdmEntityContainer="DBSRMAssetEntities">
+          <EntitySetMapping Name="Cliente">
+            <EntityTypeMapping TypeName="DBSRMAssetModel.Cliente">
+              <MappingFragment StoreEntitySet="Cliente">
+                <ScalarProperty Name="Endereco_Bairro" ColumnName="Endereco_Bairro" />
+                <ScalarProperty Name="Cod_Cliente" ColumnName="Cod_Cliente" />
+                <ScalarProperty Name="Nome_Cliente" ColumnName="Nome_Cliente" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Endereco_Rua" ColumnName="Endereco_Rua" />
+                <ScalarProperty Name="Endereco_Numero" ColumnName="Endereco_Numero" />
+                <ScalarProperty Name="Endereco_Complemento" ColumnName="Endereco_Complemento" />
+                <ScalarProperty Name="Endereco_Cidade" ColumnName="Endereco_Cidade" />
+                <ScalarProperty Name="Endereco_Estado" ColumnName="Endereco_Estado" />
+                <ScalarProperty Name="Endereco_CEP" ColumnName="Endereco_CEP" />
+                <ScalarProperty Name="Data_Nascimento" ColumnName="Data_Nascimento" />
+                <ScalarProperty Name="Data_Cadastro" ColumnName="Data_Cadastro" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Valor_Credito" ColumnName="Valor_Credito" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Produto">
+            <EntityTypeMapping TypeName="DBSRMAssetModel.Produto">
+              <MappingFragment StoreEntitySet="Produto">
+                <ScalarProperty Name="Cod_Produto" ColumnName="Cod_Produto" />
+                <ScalarProperty Name="Nome_Produto" ColumnName="Nome_Produto" />
+                <ScalarProperty Name="Descricao_Produto" ColumnName="Descricao_Produto" />
+                <ScalarProperty Name="Tipo_Produto" ColumnName="Tipo_Produto" />
+                <ScalarProperty Name="Valor_Produto" ColumnName="Valor_Produto" />
+                <ScalarProperty Name="Data_Inclusao" ColumnName="Data_Inclusao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
